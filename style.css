@@ -1,122 +1,3 @@
-/* ========== EMBEDDED HTML IFRAME ========== */
-/* Responsive Steam widget and other iframes */
-
-/* Responsive Steam widget and other iframes */
-/* Responsive Steam widget and other iframes */
-.iframe-embed-outer {
-  position: relative;
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto 2em auto;
-  background: none;
-  border: none;
-  height: 216px;
-  overflow: visible;
-}
-.iframe-embed-inner {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.iframe-embed {
-  width: 980px;
-  height: 216px;
-  min-width: 0;
-  min-height: 0;
-  border: none;
-  display: block;
-  transition: transform 0.2s;
-}
-
-@media (max-width: 1000px) {
-  .iframe-embed-outer {
-    max-width: calc(100vw - 3em);
-    height: 216px;
-    margin: 0 auto 2em auto;
-  }
-  .iframe-embed-inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .iframe-embed {
-    /* Scale down the iframe to fit the container */
-    transform: scale(calc((100vw - 3em) / 980));
-    transform-origin: center center;
-    width: 980px;
-    height: 216px;
-    min-width: 0;
-    min-height: 0;
-    border: none;
-    display: block;
-  }
-}@media (max-width: 600px) {
-  .iframe-embed-outer {
-	max-width: 100vw;
-	height: 400px;
-  }
-  .iframe-embed-inner {
-	width: 100vw;
-	height: 400px;
-  }
-  .iframe-embed {
-	transform: none;
-	width: 100vw;
-	height: 400px;
-	min-width: 0;
-	min-height: 0;
-	border: none;
-	display: block;
-  }
-}
-/* ========== CU MORPH ========== */
-.cu-morph {
-  position: relative;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-.cu-morph[data-alt]::after {
-  content: attr(data-alt);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  color: inherit;
-  background: none;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  font: inherit;
-}
-.cu-morph[data-alt]:hover::after,
-.cu-morph[data-alt]:focus::after {
-  opacity: 1;
-}
-.cu-morph[data-alt]:hover .cu-morph-text,
-.cu-morph[data-alt]:focus .cu-morph-text {
-  color: transparent !important;
-  text-shadow: none !important;
-}
-.cu-morph[data-alt]:hover,
-.cu-morph[data-alt]:focus {
-  outline: none;
-}
-
-/* =====================
-   CSS VARIABLES
-====================== */
 :root {
 	--max-site-width: 1920px;
 	--max-content-width: 1200px;
@@ -140,7 +21,128 @@
 	--divider-bottom-x: 0px;
 }
 
-/* ========== RESET & BASE ========== */
+.iframe-embed-outer {
+	position: relative;
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto 2em auto;
+	background: none;
+	border: none;
+	height: 216px;
+	overflow: visible;
+}
+
+.iframe-embed-inner {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.iframe-embed {
+	width: 980px;
+	height: 216px;
+	min-width: 0;
+	min-height: 0;
+	border: none;
+	display: block;
+	transition: transform 0.2s;
+}
+
+@media (max-width: 1000px) {
+	.iframe-embed-outer {
+		max-width: calc(100vw - 3em);
+		height: 216px;
+		margin: 0 auto 2em auto;
+	}
+
+	.iframe-embed-inner {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.iframe-embed {
+		transform: scale(calc((100vw - 3em) / 980));
+		transform-origin: center center;
+		width: 980px;
+		height: 216px;
+		min-width: 0;
+		min-height: 0;
+		border: none;
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.iframe-embed-outer {
+		max-width: 100vw;
+		height: 400px;
+	}
+
+	.iframe-embed-inner {
+		width: 100vw;
+		height: 400px;
+	}
+
+	.iframe-embed {
+		transform: none;
+		width: 100vw;
+		height: 400px;
+		min-width: 0;
+		min-height: 0;
+		border: none;
+		display: block;
+	}
+}
+
+.cu-morph {
+	position: relative;
+	transition: color 0.2s;
+	cursor: pointer;
+}
+
+.cu-morph[data-alt]::after {
+	content: attr(data-alt);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	background: none;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	font: inherit;
+}
+
+.cu-morph[data-alt]:hover::after,
+.cu-morph[data-alt]:focus::after {
+	opacity: 1;
+}
+
+.cu-morph[data-alt]:hover .cu-morph-text,
+.cu-morph[data-alt]:focus .cu-morph-text {
+	color: transparent !important;
+	text-shadow: none !important;
+}
+
+.cu-morph[data-alt]:hover,
+.cu-morph[data-alt]:focus {
+	outline: none;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -167,7 +169,6 @@ body {
 	overflow-x: hidden;
 }
 
-/* ========== LAYOUT ========== */
 .site-container {
 	max-width: var(--max-site-width);
 	margin: 0 auto;
@@ -236,7 +237,6 @@ section {
 	}
 }
 
-/* ========== HEADER & NAV ========== */
 .site-header {
 	width: 100%;
 	display: flex;
@@ -280,7 +280,6 @@ section {
 	}
 }
 
-/* ========== EMBEDDED VIDEO ========== */
 .video-embed-wrapper {
 	width: 100%;
 	max-width: 1000px;
@@ -310,7 +309,6 @@ section {
 	}
 }
 
-/* ========== CONTENT CHUNKS ========== */
 .content-chunk {
 	background: var(--section-bg);
 	border-radius: var(--section-radius);
@@ -323,7 +321,6 @@ section {
 	width: 90%;
 }
 
-/* Two-column layout for Discord section */
 .two-column-layout {
 	display: flex;
 	gap: 2em;
@@ -356,7 +353,7 @@ section {
 	.two-column-layout {
 		flex-direction: column;
 	}
-	
+
 	.two-column-layout .content-chunk {
 		margin: 2em auto;
 		width: 90%;
@@ -387,18 +384,17 @@ section {
 	}
 }
 
-/* ========== BUTTONS ========== */
 .button-container {
 	width: 166px;
 	display: flex;
 	justify-content: flex-start;
 }
 
-/* Segredos button fade-in effect */
 .segredos-fade {
 	opacity: 0 !important;
-	transition: opacity 1.2s cubic-bezier(.4,0,.2,1) !important;
+	transition: opacity 1.2s cubic-bezier(.4, 0, .2, 1) !important;
 }
+
 .segredos-fade.visible {
 	opacity: 1 !important;
 }
@@ -434,26 +430,28 @@ section {
 	box-sizing: border-box;
 }
 
-/* Special always-yellow button for Comprar */
 .casa-btn-yellow {
-  background-color: #ffe600 !important;
-  color: #222 !important;
-  box-shadow: 0 0 0 0 #fff0;
+	background-color: #ffe600 !important;
+	color: #222 !important;
+	box-shadow: 0 0 0 0 #fff0;
 }
-.casa-btn-yellow:hover, .casa-btn-yellow:focus {
-  background-color: #fff700 !important;
-  color: #000 !important;
-  border-left-width: 12px;
-  box-shadow: 0 4px 24px 0 rgba(255, 230, 0, 0.25);
+
+.casa-btn-yellow:hover,
+.casa-btn-yellow:focus {
+	background-color: #fff700 !important;
+	color: #000 !important;
+	border-left-width: 12px;
+	box-shadow: 0 4px 24px 0 rgba(255, 230, 0, 0.25);
 }
+
 .casa-btn-yellow:active {
-  background-color: #ffe600 !important;
-  color: #222 !important;
-  border-left-width: 4px;
-  border-right-width: 8px;
-  border-top-width: 4px;
-  border-bottom-width: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+	background-color: #ffe600 !important;
+	color: #222 !important;
+	border-left-width: 4px;
+	border-right-width: 8px;
+	border-top-width: 4px;
+	border-bottom-width: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .casa-btn:hover {
@@ -479,8 +477,6 @@ section {
 		border-right-width 0.04s 0.04s;
 }
 
-/* ========== SCROLL TO TOP LINK ========== */
-/* Scroll to Top Link with Fade */
 .scroll-to-top-link {
 	position: fixed;
 	right: 2rem;
@@ -510,7 +506,6 @@ section {
 	color: #003c8f;
 }
 
-/* ========== BACKGROUND SCROLL SECTIONS ========== */
 .bg-scroll-reverse {
 	background-image: url('img/bg_diamond.png');
 	background-repeat: repeat;
@@ -518,7 +513,6 @@ section {
 	background-attachment: fixed;
 }
 
-/* ========== DIVIDERS ========== */
 .divider-top.divider-bottom-flip {
 	padding-top: var(--divider-height);
 	padding-bottom: var(--divider-height);
@@ -550,12 +544,10 @@ section {
 	z-index: 3;
 }
 
-/* Dark divider for footer */
 .bg-dark.divider-top::before {
 	background-image: url('svg/divider_dark.svg');
 }
 
-/* Double-sized divider for footer */
 .site-footer.divider-top {
 	padding-top: var(--footer-divider-height);
 }
@@ -636,7 +628,6 @@ hr.divider-dark {
 	background-image: url('svg/divider_dark.svg');
 }
 
-/* ========== FONTS ========== */
 
 @font-face {
 	font-family: 'IGEBDIN';
@@ -682,7 +673,6 @@ hr.divider-dark {
 	font-style: italic;
 }
 
-/* ========== UTILITY CLASSES ========== */
 .bg-blue {
 	background-color: var(--blue-section-bg) !important;
 }
@@ -693,33 +683,18 @@ hr.divider-dark {
 
 .bg-dark {
 	background: #1C1C1C;
-	background: linear-gradient(180deg,rgba(28, 28, 28, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+	background: linear-gradient(180deg, rgba(28, 28, 28, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 	color: #ffffff !important;
-}
-
-.mt-2 {
-	margin-top: 2em !important;
-}
-
-.mb-2 {
-	margin-bottom: 2em !important;
-}
-
-.py-2 {
-	padding-top: 2em !important;
-	padding-bottom: 2em !important;
-}
-
-.px-2 {
-	padding-left: 2em !important;
-	padding-right: 2em !important;
 }
 
 .text-center {
 	text-align: center !important;
 }
 
-/* ========== FOOTER ========== */
+.spacer-small {
+	height: 1em;
+}
+
 .site-footer {
 	padding: 2em 0;
 	margin-top: 5em;
@@ -737,7 +712,35 @@ hr.divider-dark {
 	opacity: 0.9;
 }
 
-/* ========== LIGHTGALLERY CAROUSEL ========== */
+.full-width-button-container {
+	width: 100% !important;
+	margin: auto !important;
+}
+
+.full-width-button {
+	width: 100% !important;
+	margin: auto !important;
+}
+
+.section-height-675 {
+	height: 675px;
+}
+
+.section-centered-content {
+	margin: auto;
+}
+
+.patrick-hand-heading {
+	font-family: 'Patrick Hand SC', 'Comic Sans MS', sans-serif;
+	font-size: 2em;
+	margin-bottom: -0.125em;
+}
+
+.patrick-hand-heading-large {
+	font-family: 'Patrick Hand SC', 'Comic Sans MS', sans-serif;
+	font-size: 2em;
+}
+
 .inline-gallery-container {
 	width: 100vw;
 	height: 803px;
@@ -760,7 +763,6 @@ hr.divider-dark {
 	box-shadow: var(--chunk-shadow);
 }
 
-/* Remove all LightGallery backgrounds */
 .lg-container,
 .lg-outer,
 .lg-inner,
@@ -771,7 +773,6 @@ hr.divider-dark {
 	background: transparent !important;
 }
 
-/* Force LightGallery to take full width and height */
 .lg-container {
 	width: 100% !important;
 	height: 100% !important;
@@ -787,12 +788,10 @@ hr.divider-dark {
 	height: 100% !important;
 }
 
-/* Make toolbar semi-transparent for better visibility */
 .lg-toolbar {
 	background: rgba(0, 0, 0, 0.0) !important;
 }
 
-/* Make thumbnail strip semi-transparent */
 .lg-thumb-outer {
 	background: rgba(0, 0, 0, 0.0) !important;
 }
