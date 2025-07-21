@@ -139,7 +139,7 @@ function initSegredosFadeAnimation() {
 }
 
 function initInteractiveAudio() {
-	const interactiveElements = document.querySelectorAll('button, a, .casa-btn');
+	const interactiveElements = document.querySelectorAll('button, a, .casa-btn, iframe, .lg-image, .lg-thumb-item');
 
 	interactiveElements.forEach(element => {
 		element.addEventListener('mouseenter', () => {
@@ -151,7 +151,7 @@ function initInteractiveAudio() {
 		});
 	});
 
-	const cuMorphElements = document.querySelectorAll('.cu-morph');
+	const cuMorphElements = document.querySelectorAll('.cu-morph, .badge-item, .gallery-frame');
 
 	cuMorphElements.forEach(element => {
 		element.addEventListener('mouseenter', () => {
