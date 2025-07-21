@@ -12,6 +12,74 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+	<!-- LightGallery CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			if (window.lightGallery) {
+				const lgContainer = document.getElementById('inline-gallery-container');
+				const inlineGallery = lightGallery(lgContainer, {
+					container: lgContainer,
+					dynamic: true,
+					hash: false,
+					closable: false,
+					showMaximizeIcon: false,
+					appendSubHtmlTo: '.lg-item',
+					slideDelay: 400,
+					plugins: [lgZoom, lgThumbnail],
+					thumbnail: true,
+					zoom: true,
+					fullScreen: false,
+					download: true,
+					share: false,
+					rotate: false,
+					flipHorizontal: false,
+					flipVertical: false,
+					autoplayFirstVideo: false,
+					pager: false,
+					galleryId: 1,
+					width: '100%',
+					height: '100%',
+					dynamicEl: [
+						{
+							src: 'img/screenshots/1741958972.png',
+							thumb: 'img/screenshots/1741958972.png'
+						},
+						{
+							src: 'img/screenshots/1741959116.png',
+							thumb: 'img/screenshots/1741959116.png'
+						},
+						{
+							src: 'img/screenshots/1745107477.png',
+							thumb: 'img/screenshots/1745107477.png'
+						},
+						{
+							src: 'img/screenshots/1745417588.png',
+							thumb: 'img/screenshots/1745417588.png'
+						},
+						{
+							src: 'img/screenshots/1746453986.png',
+							thumb: 'img/screenshots/1746453986.png'
+						},
+						{
+							src: 'img/screenshots/1746757248.png',
+							thumb: 'img/screenshots/1746757248.png'
+						},
+						{
+							src: 'img/screenshots/1752945580.png',
+							thumb: 'img/screenshots/1752945580.png'
+						}
+					]
+				});
+
+				// Open the gallery in carousel mode
+				inlineGallery.openGallery();
+			}
+		});
+	</script>
 </head>
 
 <body>
@@ -48,7 +116,7 @@
 			<div class="content-chunk">
 				<h3 class="text-center">O simulador de reality show compatível com seus amigos</h3>
 				<p>
-					<b>Você monta um elenco</b> formado pelos seus amigos, personagens ou celebridades favoritas, enfia todo mundo numa casa, e assiste o circo pegar fogo até sobrar um só.</em>
+					<b>Você monta um elenco</b> formado pelos seus amigos, personagens ou celebridades favoritas, enfia todo mundo numa casa, e assiste o circo pegar fogo até sobrar um só.
 				</p>
 			</div>
 
@@ -66,7 +134,85 @@
 	<section>
 		<div class="section-content">
 			<h2><span class="cu-morph" data-alt="🍆👂" tabindex="0"><span class="cu-morph-text">Duvido</span></span>u? Eu tenho fotos</h2>
+			<div id="inline-gallery-container" class="inline-gallery-container"></div>
 			<p><b>Quer mais fotos? Inacreditável!!!</b> Dá uma espiadinha na página de <a href="#imprensa">imprensa</a>.</p>
+		</div>
+	</section>
+
+	<div style="height: 1em;"></div>
+
+	<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
+		<div class="section-content">
+			<h2>Festival de in<span class="cu-morph" data-alt="🍥" tabindex="0"><span class="cu-morph-text">cu</span></span>mbências</h2>
+			<div class="content-chunk">
+				<h3 class="text-center">O mais Grande e mais Brasileiro simulador de cárcere privado competitivo que o dinheiro pode comprar!</h3>
+				<p>
+				<ul>
+					<li>Milhares de situações inusitadas que eu fiquei muito tempo escrevendo!</li>
+					<li>Escolha participantes, eventos, e até a própria casa!</li>
+					<li>Compartilhe suas terríveis criações pela oficina Steam!</li>
+					<li>Confronte os horrores da humanidade com 32 combinações de natureza!</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="section-content">
+			<h3 style="font-family: 'Patrick Hand SC', 'Comic Sans MS', sans-serif; font-size: 2em; margin-bottom: -0.125em;">Você quer saber mais?</h3>
+			<h2>Você não cansa?!</h2>
+		</div>
+		<div class="video-embed-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QpZu6KWxWq8?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		<div class="content-chunk">
+			<h3 class="text-center">Você é quem manda!</h3>
+			<p>
+			<ul>
+				<li><b>ESCOLHA</b> as suas pessoas favoritas para confinar na casa mais vigiada do Brasil</li>
+				<li><b>CONFRONTE</b> os horrores da psique e do ego, defina os atributos da personalidade dos seus amigos, e encontre as 32 combinações diferentes da Natureza humana</li>
+				<li><b>VOCÊ DECIDE</b> se os votos dos participantes e do Brasil são simulados pelo jogo, ou se você toma as rédeas do destino, dita o resultado de cada votação, e prova de uma vez por todas que a democracia seria muito melhor se obedecesse à sua vontade</li>
+				<li><b>SUBMETA</b> os participantes a milhares de situações absurdas e inusitadas que eu fiquei muito tempo escrevendo</li>
+				<li><b>PERSONALIZE</b> cada pessoinha que você escolheu aprisionar em seu computador, os acontecimentos gerados pelo jogo, e até a própria casa em que tudo acontece</li>
+				<li><b>TESTEMUNHE</b> os seus confinados competindo pela Coroa do Monarca e pela Ascensão do Hierofante. Quem não provar do leite da imunidade, corre o risco de acabar no PAREDÃO</li>
+				<li><b>APRECIE</b> as nove ou mais faixas de trilha sonora original em glorioso chiptune, e o design de interface em que cada botão e caixa de texto contém vestígios de autêntica carne viva!</li>
+			</ul>
+			</p>
+		</div>
+		<div class="video-embed-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yixCzrpEhvY?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		<div class="content-chunk">
+			<h3 class="text-center">IRMÃO Grande & Brasileiro 2</h3>
+			<p><b>Em IG&B2 você forma um elenco das suas pessoas favoritas.</b> Seus amigos, os personagens daquele desenho que você jura que nunca assistiu, e até os figurões da política e do entretenimento. As possibilidades são infinitas (as possibilidades podem não ser infinitas)!</b></p>
+			<p><b>Você trancafia todos dentro de uma casa</b> (dentro de um jogo) e lá eles vivem as situações mais absurdas e inusitadas que o cérebro humano pôde conceber. Aos moldes dos grandes cárceres competitivos da história, os participantes competem todas as semanas em uma prova, de onde apenas um sai triunfante. Depois da prova da semana, todos que não provaram do leite da imunidade votam para condenar dois participantes ao paredão, sob o risco da penalidade máxima: o DESPEJO.</p>
+			<p><b>Aproveite as opções de customização</b> para construir a sua própria casa, manipular a velocidade do jogo, salvar e compartilhar os seus participantes pela internet, e até mesmo personalizar o baralho de eventos que é usado para gerar os acontecimentos de cada semana.</p>
+		</div>
+	</section>
+
+	<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
+		<div class="section-content">
+			<h2>Socialize-se</h2>
+			<div class="two-column-layout">
+				<div class="content-chunk">
+					<p><b>Junte-se a nós no Discord!</b></p>
+					<p>Compartilhe as suas criações, conheça nossa comunidade, vislumbre o futuro do jogo, e faça ouvida a sua voz — tome as rédeas do destino!</p>
+					<div class="button-container" style="width: 100% !important; margin: auto !important;"><a href="https://discord.com/invite/Psw69KBkKV" class="casa-btn casa-btn-yellow patrick-hand-sc-regular" style="width: 100% !important; margin: auto !important;" target="_blank" rel="noopener">Socializar</a></div>
+				</div>
+				<div class="iframe-column">
+					<iframe src="https://discord.com/widget?id=1095055033248256193&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="section-content" style="height: 675px;">
+			<div style="margin: auto;">
+				<h3 style="font-family: 'Patrick Hand SC', 'Comic Sans MS', sans-serif; font-size: 2em;">Agora é com você.</h3>
+				<div class="button-container" style="width: 100% !important; margin: auto !important;"><button type="button" onclick="window.location.href='#segredos'" class="casa-btn patrick-hand-sc-regular segredos-fade" style="width: 100% !important; margin: auto !important;">Segredos</button></div>
+			</div>
 		</div>
 	</section>
 
@@ -78,6 +224,35 @@
 
 	<a href="#" class="scroll-to-top-link patrick-hand-sc-regular">Subir pra cima</a>
 	<script src="script.js"></script>
+	<script>
+		// Segredos button fade-in on viewport
+		(function () {
+			var segredosBtn = document.querySelector('.button-container button.casa-btn.patrick-hand-sc-regular.segredos-fade');
+			if (segredosBtn) {
+				let fadeTimeout = null;
+				function checkSegredosInView() {
+					const rect = segredosBtn.getBoundingClientRect();
+					const inView = rect.top < window.innerHeight && rect.bottom > 0;
+					if (inView && !segredosBtn.classList.contains('visible')) {
+						if (!fadeTimeout) {
+							fadeTimeout = setTimeout(() => {
+								segredosBtn.classList.add('visible');
+							}, 2330);
+						}
+					} else if (!inView) {
+						segredosBtn.classList.remove('visible');
+						if (fadeTimeout) {
+							clearTimeout(fadeTimeout);
+							fadeTimeout = null;
+						}
+					}
+				}
+				window.addEventListener('scroll', checkSegredosInView);
+				window.addEventListener('resize', checkSegredosInView);
+				checkSegredosInView();
+			}
+		})();
+	</script>
 </body>
 
 </html>

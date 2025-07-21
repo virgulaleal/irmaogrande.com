@@ -323,6 +323,46 @@ section {
 	width: 90%;
 }
 
+/* Two-column layout for Discord section */
+.two-column-layout {
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	width: 100%;
+	max-width: var(--max-content-width);
+}
+
+.two-column-layout .content-chunk {
+	flex: 1;
+	margin: 0;
+	width: auto;
+}
+
+.iframe-column {
+	flex: 1;
+	min-height: 500px;
+}
+
+.iframe-column iframe {
+	width: 100%;
+	height: 500px;
+	border-radius: var(--section-radius);
+	border: var(--section-border-width) solid var(--section-border);
+	border-left: var(--section-border-left-width) solid var(--section-border);
+	box-shadow: var(--chunk-shadow);
+}
+
+@media (max-width: 900px) {
+	.two-column-layout {
+		flex-direction: column;
+	}
+	
+	.two-column-layout .content-chunk {
+		margin: 2em auto;
+		width: 90%;
+	}
+}
+
 .content-chunk h3 {
 	font-family: "Patrick Hand SC", "Comic Sans MS", sans-serif;
 	font-weight: 400;
@@ -352,6 +392,15 @@ section {
 	width: 166px;
 	display: flex;
 	justify-content: flex-start;
+}
+
+/* Segredos button fade-in effect */
+.segredos-fade {
+	opacity: 0 !important;
+	transition: opacity 1.2s cubic-bezier(.4,0,.2,1) !important;
+}
+.segredos-fade.visible {
+	opacity: 1 !important;
 }
 
 .casa-btn {
@@ -686,4 +735,74 @@ hr.divider-dark {
 	margin: 0;
 	font-size: 1.1em;
 	opacity: 0.9;
+}
+
+/* ========== LIGHTGALLERY CAROUSEL ========== */
+.inline-gallery-container {
+	width: 100vw;
+	height: 803px;
+	max-width: var(--max-content-width);
+	margin: 2em auto;
+	margin-top: 0px;
+	border-radius: 12px;
+	overflow: hidden;
+	background: transparent !important;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.lg-image,
+.lg-thumb-item {
+	border-radius: 12px;
+	border: var(--section-border-width) solid var(--section-border);
+	border-left: var(--section-border-left-width) solid var(--section-border);
+	box-shadow: var(--chunk-shadow);
+}
+
+/* Remove all LightGallery backgrounds */
+.lg-container,
+.lg-outer,
+.lg-inner,
+.lg-item,
+.lg-toolbar,
+.lg-thumb-outer,
+.lg-backdrop {
+	background: transparent !important;
+}
+
+/* Force LightGallery to take full width and height */
+.lg-container {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.lg-outer {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.lg-inner {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/* Make toolbar semi-transparent for better visibility */
+.lg-toolbar {
+	background: rgba(0, 0, 0, 0.0) !important;
+}
+
+/* Make thumbnail strip semi-transparent */
+.lg-thumb-outer {
+	background: rgba(0, 0, 0, 0.0) !important;
+}
+
+@media (max-width: 800px) {
+	.inline-gallery-container {
+		width: 95vw;
+		height: 500px;
+		max-width: none;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
