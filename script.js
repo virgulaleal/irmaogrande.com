@@ -122,7 +122,7 @@ function initSegredosFadeAnimation() {
 				if (!fadeTimeout) {
 					fadeTimeout = setTimeout(() => {
 						segredosBtn.classList.add('visible');
-					}, 2330);
+					}, 1400);
 				}
 			} else if (!inView) {
 				segredosBtn.classList.remove('visible');
