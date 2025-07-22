@@ -183,6 +183,71 @@ code {
 	padding-right: 0.25em;
 }
 
+/* Tutorial Images */
+.tutorial-screenshot {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1.5em auto;
+	border: var(--section-border-width) solid var(--section-border);
+	border-left: var(--section-border-left-width) solid var(--section-border);
+	border-radius: var(--section-radius);
+	box-shadow: var(--chunk-shadow);
+	background: #fff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+
+.tutorial-screenshot:hover {
+	box-shadow: var(--chunk-shadow), 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-screenshot.zoomed {
+	transform: scale(1.5);
+	z-index: 1000;
+	box-shadow: var(--chunk-shadow), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.tutorial-icon-float-left {
+	float: left;
+	margin: 0 1em 1em 0;
+	width: 128px;
+	height: 128px;
+	object-fit: contain;
+}
+
+.tutorial-icon-float-right {
+	float: right;
+	margin: 0 0 1em 1em;
+	width: 33%;
+	height: 50%;
+	object-fit: contain;
+}
+
+@media (max-width: 600px) {
+	.tutorial-screenshot {
+		margin: 1em auto;
+		border-width: 3px;
+		border-left-width: 6px;
+	}
+	
+	.tutorial-screenshot.zoomed {
+		transform: scale(1.2);
+	}
+	
+	.tutorial-icon-float-left,
+	.tutorial-icon-float-right {
+		float: none;
+		display: block;
+		margin: 1em auto;
+		width: 96px;
+		height: 96px;
+	}
+}
+
 .site-container {
 	max-width: var(--max-site-width);
 	margin: 0 auto;
@@ -222,6 +287,13 @@ code {
 }
 
 main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.page-content {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
