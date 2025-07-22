@@ -6,21 +6,20 @@ const SECTION_SELECTOR = '.bg-scroll-reverse';
 const DIVIDER_TOP_X_SPEED = -0.25;
 const DIVIDER_BOTTOM_X_SPEED = -0.25;
 
-// Page switching configuration
 const PAGES = {
-	'': { 
+	'': {
 		bgColor: '#f8ff83',
 		title: 'IRMÃO Grande & Brasileiro 2'
 	},
-	'manual': { 
+	'manual': {
 		bgColor: '#f4f4f4',
 		title: 'Manual - IRMÃO Grande & Brasileiro 2'
 	},
-	'imprensa': { 
+	'imprensa': {
 		bgColor: '#79b6e5',
 		title: 'Imprensa - IRMÃO Grande & Brasileiro 2'
 	},
-	'segredos': { 
+	'segredos': {
 		bgColor: '#1c1c1c',
 		title: 'Segredos - IRMÃO Grande & Brasileiro 2'
 	}
@@ -74,11 +73,10 @@ function initLightGallery() {
 	if (window.lightGallery) {
 		const lgContainer = document.getElementById('inline-gallery-container');
 		if (lgContainer) {
-			// Destroy existing gallery instance if it exists
 			if (lgContainer.lgModal) {
 				lgContainer.lgModal.destroy();
 			}
-			
+
 			const inlineGallery = lightGallery(lgContainer, {
 				container: lgContainer,
 				dynamic: true,
@@ -142,10 +140,9 @@ function initLightGallery() {
 function initSegredosFadeAnimation() {
 	var segredosBtn = document.querySelector('.button-container button.casa-btn.patrick-hand-sc-regular.segredos-fade');
 	if (segredosBtn) {
-		// Skip if already initialized
 		if (segredosBtn.hasAttribute('data-fade-initialized')) return;
 		segredosBtn.setAttribute('data-fade-initialized', 'true');
-		
+
 		let fadeTimeout = null;
 		function checkSegredosInView() {
 			const rect = segredosBtn.getBoundingClientRect();
@@ -170,11 +167,9 @@ function initSegredosFadeAnimation() {
 	}
 }
 
-// Store event listener functions for proper removal
 const audioEventHandlers = new WeakMap();
 
 function initInteractiveAudio() {
-	// First, remove existing listeners from ALL elements that might have them
 	const allPossibleElements = document.querySelectorAll('[data-audio-initialized]');
 	allPossibleElements.forEach(element => {
 		const handlers = audioEventHandlers.get(element);
@@ -189,45 +184,39 @@ function initInteractiveAudio() {
 	const interactiveElements = document.querySelectorAll('button, a, .casa-btn, iframe, .lg-image, .lg-thumb-item');
 
 	interactiveElements.forEach(element => {
-		// Create handler functions for this specific element
 		const mouseenterHandler = () => {
 			playRandomTypeAudio();
 		};
-		
+
 		const mousedownHandler = () => {
 			playAudio('audio/click_01.wav');
 		};
-		
-		// Store handlers for later removal
+
 		audioEventHandlers.set(element, {
 			mouseenter: mouseenterHandler,
 			mousedown: mousedownHandler
 		});
-		
-		// Add event listeners
+
 		element.addEventListener('mouseenter', mouseenterHandler);
 		element.addEventListener('mousedown', mousedownHandler);
-		
-		// Mark as initialized
+
 		element.setAttribute('data-audio-initialized', 'true');
 	});
 
 	const cuMorphElements = document.querySelectorAll('.cu-morph, .badge-item, .gallery-frame');
 
 	cuMorphElements.forEach(element => {
-		// Skip if already processed above
 		if (element.hasAttribute('data-audio-initialized')) return;
-		
+
 		const mouseenterHandler = () => {
 			playAudio('audio/grunt.wav');
 		};
-		
-		// Store handler for later removal
+
 		audioEventHandlers.set(element, {
 			mouseenter: mouseenterHandler,
 			mousedown: null
 		});
-		
+
 		element.addEventListener('mouseenter', mouseenterHandler);
 		element.setAttribute('data-audio-initialized', 'true');
 	});
@@ -235,49 +224,42 @@ function initInteractiveAudio() {
 
 function switchPage(pageName) {
 	if (currentPage === pageName) return;
-	
+
 	const mainContent = document.querySelector('main');
 	const pageConfig = PAGES[pageName] || PAGES[''];
-	
-	// Update URL hash without triggering scroll
+
 	if (pageName) {
 		history.pushState(null, null, '#' + pageName);
 	} else {
 		history.pushState(null, null, window.location.pathname);
 	}
-	
-	// Update document title
+
 	document.title = pageConfig.title;
-	
-	// Add fade out class
+
 	mainContent.classList.add('page-transition-out');
-	
+
 	setTimeout(() => {
-		// Change background color
 		document.body.style.backgroundColor = pageConfig.bgColor;
-		
-		// Load page content
+
 		loadPageContent(pageName);
-		
-		// Scroll to top
+
 		window.scrollTo({ top: 0, behavior: 'smooth' });
-		
-		// Remove fade out and add fade in
+
 		mainContent.classList.remove('page-transition-out');
 		mainContent.classList.add('page-transition-in');
-		
+
 		setTimeout(() => {
 			mainContent.classList.remove('page-transition-in');
 		}, 300);
-		
+
 		currentPage = pageName;
 	}, 300);
 }
 
 function loadPageContent(pageName) {
 	const mainContent = document.querySelector('main');
-	
-	switch(pageName) {
+
+	switch (pageName) {
 		case 'manual':
 			mainContent.innerHTML = getManualContent();
 			break;
@@ -291,23 +273,17 @@ function loadPageContent(pageName) {
 			mainContent.innerHTML = getHomeContent();
 			break;
 	}
-	
-	// Re-initialize all functionality after content is loaded
+
 	reinitializePageFeatures();
 }
 
 function reinitializePageFeatures() {
-	// Re-initialize LightGallery
 	initLightGallery();
-	
-	// Re-initialize interactive audio for new elements
+
 	initInteractiveAudio();
-	
-	// Re-initialize Segredos fade animation
+
 	initSegredosFadeAnimation();
-	
-	// Re-initialize any other features that might be needed
-	// (scroll to top links, etc. are handled separately)
+
 }
 
 function getHomeContent() {
@@ -549,13 +525,11 @@ function getSegredosContent() {
 }
 
 function initPageSwitching() {
-	// Handle browser back/forward buttons
-	window.addEventListener('popstate', function() {
+	window.addEventListener('popstate', function () {
 		const hash = window.location.hash.slice(1);
 		switchPage(hash);
 	});
-	
-	// Update navigation buttons to use page switching
+
 	document.querySelectorAll('.main-nav button, .main-nav a').forEach(btn => {
 		const onclick = btn.getAttribute('onclick');
 		if (onclick && onclick.includes('window.location.href')) {
@@ -567,8 +541,7 @@ function initPageSwitching() {
 			}
 		}
 	});
-	
-	// Initialize current page based on URL
+
 	const currentHash = window.location.hash.slice(1);
 	if (currentHash && PAGES[currentHash]) {
 		switchPage(currentHash);
