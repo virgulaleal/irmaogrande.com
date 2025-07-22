@@ -24,9 +24,9 @@
 		<header class="site-header">
 			<img src="img/logo_shadow.png" alt="IRMÃO Grande & Brasileiro 2" class="site-logo">
 			<nav class="main-nav">
-				<div class="button-container"><button type="button" onclick="window.location.href='#'" class="casa-btn patrick-hand-sc-regular">Casa</button></div>
-				<div class="button-container"><button type="button" onclick="window.location.href='#manual'" class="casa-btn patrick-hand-sc-regular">Manual</button></div>
-				<div class="button-container"><button type="button" onclick="window.location.href='#imprensa'" class="casa-btn patrick-hand-sc-regular">Imprensa</button></div>
+				<div class="button-container"><button type="button" onclick="switchPage('')" class="casa-btn patrick-hand-sc-regular">Casa</button></div>
+				<div class="button-container"><button type="button" onclick="switchPage('manual')" class="casa-btn patrick-hand-sc-regular">Manual</button></div>
+				<div class="button-container"><button type="button" onclick="switchPage('imprensa')" class="casa-btn patrick-hand-sc-regular">Imprensa</button></div>
 				<div class="button-container"><a href="https://virgula.itch.io/irmao-grande" class="casa-btn patrick-hand-sc-regular" target="_blank" rel="noopener">Clássico</a></div>
 				<div class="button-container"><a href="https://store.steampowered.com/app/1569520/IRMO_Grande__Brasileiro_2/" class="casa-btn casa-btn-yellow patrick-hand-sc-regular" target="_blank" rel="noopener">Comprar</a></div>
 			</nav>
@@ -39,151 +39,166 @@
 				</div>
 
 				<nav class="main-nav">
-					<div class="button-container"><button type="button" onclick="window.location.href='#continuar'" class="casa-btn patrick-hand-sc-regular">Continuar</button></div>
+					<div class="button-container"><button type="button" onclick="document.getElementById('continuar').scrollIntoView({behavior: 'smooth'})" class="casa-btn patrick-hand-sc-regular">Continuar</button></div>
 					<div class="button-container"><a href="https://store.steampowered.com/app/1569520/IRMO_Grande__Brasileiro_2/" class="casa-btn casa-btn-yellow patrick-hand-sc-regular" target="_blank" rel="noopener">Comprar</a></div>
 				</nav>
 			</section>
-		</main>
-	</div>
 
-	<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
-		<div class="section-content">
-			<h2>É de cair o <span class="cu-morph" data-alt="🍥" tabindex="0"><span class="cu-morph-text">cu</span></span> da <span class="cu-morph" data-alt="🍑" tabindex="0"><span class="cu-morph-text">bunda</span></span></h2>
-			<div class="content-chunk">
-				<h3 class="text-center">O simulador de reality show compatível com seus amigos</h3>
-				<div class="festival-chunk-layout">
-					<div class="festival-content">
+			<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
+				<div class="section-content">
+					<h2>É de cair o <span class="cu-morph" data-alt="🍥" tabindex="0"><span class="cu-morph-text">cu</span></span> da <span class="cu-morph" data-alt="🍑" tabindex="0"><span class="cu-morph-text">bunda</span></span></h2>
+					<div class="content-chunk">
+						<h3 class="text-center">O simulador de reality show compatível com seus amigos</h3>
+						<div class="festival-chunk-layout">
+							<div class="festival-content">
+								<p>
+									<b>Você monta um elenco</b> formado pelos seus amigos, personagens ou celebridades favoritas, enfia todo mundo numa casa, e assiste o circo pegar fogo até sobrar um só.
+								</p>
+							</div>
+							<div class="festival-gallery">
+								<div class="gallery-frame">
+									<img src="img/miguel.png" alt="Miguel" class="gallery-image">
+								</div>
+								<div class="gallery-frame">
+									<img src="img/fofinho.png" alt="Fofinho" class="gallery-image">
+								</div>
+								<div class="gallery-frame">
+									<img src="img/popai.png" alt="Popai" class="gallery-image">
+								</div>
+								<p style="text-align: center; font-size: 12pt;"><i>Finge que são os seus amigos aqui, não tenho foto de vocês.</i></p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="iframe-embed-outer">
+						<div class="iframe-embed-inner">
+							<iframe src="https://store.steampowered.com/widget/1569520/" class="iframe-embed"></iframe>
+						</div>
+					</div>
+
+					<h2>Tem jogo no celular?</h2>
+					<div class="two-column-layout" style="margin-top: 1.5em;">
+						<div>
+							<div class="content-chunk">
+								<h3 class="text-center">Agora disponível para Android! Também!</h3>
+								<p><b>O bom e velho IG&B2, mas menor!</b> É mais difícil de acertar o dedo nos botõezinhos! Dentro do seu bolso! Da sua calça!</p>
+								<p>Eu não sei mais o que te falar sobre isso. É literalmente o mesmo jogo, só que tortuosamente portado para dispositivos móveis, então você pode levar no rolê e infernizar seus amigos narrando o jogo pra eles a qualquer hora, em qualquer lugar. Eles vão adorar!</p>
+							</div>
+							<div class="button-container" style="margin: auto; margin-top: 1em;"><a href="https://play.google.com/store/apps/details?id=org.godotengine.igeb2" class="casa-btn casa-btn-yellow casa-btn-wide patrick-hand-sc-regular" target="_blank" rel="noopener">Comprar (Google Play)</a></div>
+						</div>
+						<div class="shorts-embed-wrapper">
+							<iframe width="489" height="869" src="https://www.youtube.com/embed/VJg0VOB6k1E" title="IRMÃO Grande &amp; Brasileiro 2 para Android" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+
+			<section>
+				<div class="section-content">
+					<h2><span class="cu-morph" data-alt="🍆👂" tabindex="0"><span class="cu-morph-text">Duvido</span></span>u? Eu tenho fotos</h2>
+					<div id="inline-gallery-container" class="inline-gallery-container"></div>
+					<p><b>Quer mais fotos? Inacreditável!!!</b> Dá uma espiadinha na página de <a href="#imprensa" onclick="switchPage('imprensa')">imprensa</a>.</p>
+				</div>
+			</section>
+
+			<div class="spacer-small"></div>
+
+			<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
+				<div class="section-content">
+					<h2>Festival de in<span class="cu-morph" data-alt="💩" tabindex="0"><span class="cu-morph-text">cu</span></span>mbências</h2>
+					<div class="content-chunk">
+						<h3 class="text-center">O mais Grande e mais Brasileiro simulador de cárcere privado competitivo que o dinheiro pode comprar!</h3>
 						<p>
-							<b>Você monta um elenco</b> formado pelos seus amigos, personagens ou celebridades favoritas, enfia todo mundo numa casa, e assiste o circo pegar fogo até sobrar um só.
+						<ul class="two-column-list">
+							<li><b>Milhares</b> de situações inusitadas que eu fiquei muito tempo escrevendo!</li>
+							<li><b>Escolha</b> participantes, eventos, e até a própria casa!</li>
+							<li><b>Compartilhe</b> suas terríveis criações pela <a href="https://steamcommunity.com/app/1569520/workshop/" target="_blank" rel="noopener">oficina Steam</a>!</li>
+							<li><b>Confronte</b> os horrores da humanidade com 32 combinações de natureza!</li>
+						</ul>
 						</p>
 					</div>
-					<div class="festival-gallery">
-						<div class="gallery-frame">
-							<img src="img/miguel.png" alt="Miguel" class="gallery-image">
+					<div class="badge-container">
+						<div class="badge-item">
+							<img src="img/badges/brasil2.png" alt="Brasil 2" class="badge-icon">
 						</div>
-						<div class="gallery-frame">
-							<img src="img/fofinho.png" alt="Fofinho" class="gallery-image">
+						<div class="badge-item">
+							<img src="img/badges/eliminado.png" alt="Eliminado" class="badge-icon">
 						</div>
-						<div class="gallery-frame">
-							<img src="img/popai.png" alt="Popai" class="gallery-image">
+						<div class="badge-item">
+							<img src="img/badges/hierofante.png" alt="Hierofante" class="badge-icon">
 						</div>
-						<p style="text-align: center; font-size: 12pt;"><i>Finge que são os seus amigos aqui, não tenho foto de vocês.</i></p>
+						<div class="badge-item">
+							<img src="img/badges/imune.png" alt="Imune" class="badge-icon">
+						</div>
+						<div class="badge-item">
+							<img src="img/badges/monarca.png" alt="Monarca" class="badge-icon">
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
-
-			<div class="iframe-embed-outer">
-				<div class="iframe-embed-inner">
-					<iframe src="https://store.steampowered.com/widget/1569520/" class="iframe-embed"></iframe>
+			<section>
+				<div class="section-content">
+					<h3 class="patrick-hand-heading">Você quer saber mais?</h3>
+					<h2><span class="cu-morph" data-alt="👶" tabindex="0"><span class="cu-morph-text">Você</span></span> não cansa?!</h2>
 				</div>
-			</div>
-
-
-		</div>
-	</section>
-
-	<section>
-		<div class="section-content">
-			<h2><span class="cu-morph" data-alt="🍆👂" tabindex="0"><span class="cu-morph-text">Duvido</span></span>u? Eu tenho fotos</h2>
-			<div id="inline-gallery-container" class="inline-gallery-container"></div>
-			<p><b>Quer mais fotos? Inacreditável!!!</b> Dá uma espiadinha na página de <a href="#imprensa">imprensa</a>.</p>
-		</div>
-	</section>
-
-	<div class="spacer-small"></div>
-
-	<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
-		<div class="section-content">
-			<h2>Festival de in<span class="cu-morph" data-alt="💩" tabindex="0"><span class="cu-morph-text">cu</span></span>mbências</h2>
-			<div class="content-chunk">
-				<h3 class="text-center">O mais Grande e mais Brasileiro simulador de cárcere privado competitivo que o dinheiro pode comprar!</h3>
-				<p>
-				<ul class="two-column-list">
-					<li><b>Milhares</b> de situações inusitadas que eu fiquei muito tempo escrevendo!</li>
-					<li><b>Escolha</b> participantes, eventos, e até a própria casa!</li>
-					<li><b>Compartilhe</b> suas terríveis criações pela <a href="https://steamcommunity.com/app/1569520/workshop/" target="_blank" rel="noopener">oficina Steam</a>!</li>
-					<li><b>Confronte</b> os horrores da humanidade com 32 combinações de natureza!</li>
-				</ul>
-				</p>
-			</div>
-			<div class="badge-container">
-				<div class="badge-item">
-					<img src="img/badges/brasil2.png" alt="Brasil 2" class="badge-icon">
+				<div class="video-embed-wrapper">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QpZu6KWxWq8?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
-				<div class="badge-item">
-					<img src="img/badges/eliminado.png" alt="Eliminado" class="badge-icon">
-				</div>
-				<div class="badge-item">
-					<img src="img/badges/hierofante.png" alt="Hierofante" class="badge-icon">
-				</div>
-				<div class="badge-item">
-					<img src="img/badges/imune.png" alt="Imune" class="badge-icon">
-				</div>
-				<div class="badge-item">
-					<img src="img/badges/monarca.png" alt="Monarca" class="badge-icon">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section>
-		<div class="section-content">
-			<h3 class="patrick-hand-heading">Você quer saber mais?</h3>
-			<h2><span class="cu-morph" data-alt="👶" tabindex="0"><span class="cu-morph-text">Você</span></span> não cansa?!</h2>
-		</div>
-		<div class="video-embed-wrapper">
-			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QpZu6KWxWq8?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</div>
-		<div class="content-chunk">
-			<h3 class="text-center">Você é quem manda!</h3>
-			<p>
-			<ul class="two-column-list vertical-flow">
-				<li><b>ESCOLHA</b> as suas pessoas favoritas para confinar na casa mais vigiada do Brasil</li>
-				<li><b>CONFRONTE</b> os horrores da psique e do ego, defina os atributos da personalidade dos seus amigos, e encontre as 32 combinações diferentes da Natureza humana</li>
-				<li><b>VOCÊ DECIDE</b> se os votos dos participantes e do Brasil são simulados pelo jogo, ou se você toma as rédeas do destino, dita o resultado de cada votação, e prova de uma vez por todas que a democracia seria muito melhor se obedecesse à sua vontade</li>
-				<li><b>SUBMETA</b> os participantes a milhares de situações absurdas e inusitadas que eu fiquei muito tempo escrevendo</li>
-				<li><b>PERSONALIZE</b> cada pessoinha que você escolheu aprisionar em seu computador, os acontecimentos gerados pelo jogo, e até a própria casa em que tudo acontece</li>
-				<li><b>TESTEMUNHE</b> os seus confinados competindo pela Coroa do Monarca e pela Ascensão do Hierofante. Quem não provar do leite da imunidade, corre o risco de acabar no PAREDÃO</li>
-				<li><b>APRECIE</b> as nove ou mais faixas de trilha sonora original em glorioso chiptune, e o design de interface em que cada botão e caixa de texto contém vestígios de autêntica carne viva!</li>
-			</ul>
-			</p>
-		</div>
-		<div class="video-embed-wrapper">
-			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yixCzrpEhvY?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</div>
-		<div class="content-chunk">
-			<h3 class="text-center">IRMÃO Grande & Brasileiro 2</h3>
-			<p><b>Em IG&B2 você forma um elenco das suas pessoas favoritas.</b> Seus amigos, os personagens daquele desenho que você jura que nunca assistiu, e até os figurões da política e do entretenimento. As possibilidades são infinitas (as possibilidades podem não ser infinitas)!</b></p>
-			<p><b>Você trancafia todos dentro de uma casa</b> (dentro de um jogo) e lá eles vivem as situações mais absurdas e inusitadas que o cérebro humano pôde conceber. Aos moldes dos grandes cárceres competitivos da história, os participantes competem todas as semanas em uma prova, de onde apenas um sai triunfante. Depois da prova da semana, todos que não provaram do leite da imunidade votam para condenar dois participantes ao paredão, sob o risco da penalidade máxima: o DESPEJO.</p>
-			<p><b>Aproveite as opções de customização</b> para construir a sua própria casa, manipular a velocidade do jogo, salvar e compartilhar os seus participantes pela internet, e até mesmo personalizar o baralho de eventos que é usado para gerar os acontecimentos de cada semana.</p>
-		</div>
-	</section>
-
-	<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
-		<div class="section-content">
-			<h2>Socialize-se</h2>
-			<div class="two-column-layout" style="margin-top: 1.5em;">
 				<div class="content-chunk">
-					<h3><span class="cu-morph" data-alt="🍄🍄‍🟫🍄🍄‍🟫🍄🍄‍🟫" tabindex="0"><span class="cu-morph-text">Junte-se a nós no Discord!</span></span></h3>
-					<p>Compartilhe as suas criações, conheça nossa comunidade, vislumbre o futuro do jogo, e faça ouvida a sua voz — tome as rédeas do destino!</p>
-					<div class="button-container full-width-button-container"><a href="https://discord.com/invite/Psw69KBkKV" class="casa-btn casa-btn-yellow patrick-hand-sc-regular full-width-button" target="_blank" rel="noopener">Socializar</a></div>
+					<h3 class="text-center">Você é quem manda!</h3>
+					<p>
+					<ul class="two-column-list vertical-flow">
+						<li><b>ESCOLHA</b> as suas pessoas favoritas para confinar na casa mais vigiada do Brasil</li>
+						<li><b>CONFRONTE</b> os horrores da psique e do ego, defina os atributos da personalidade dos seus amigos, e encontre as 32 combinações diferentes da Natureza humana</li>
+						<li><b>VOCÊ DECIDE</b> se os votos dos participantes e do Brasil são simulados pelo jogo, ou se você toma as rédeas do destino, dita o resultado de cada votação, e prova de uma vez por todas que a democracia seria muito melhor se obedecesse à sua vontade</li>
+						<li><b>SUBMETA</b> os participantes a milhares de situações absurdas e inusitadas que eu fiquei muito tempo escrevendo</li>
+						<li><b>PERSONALIZE</b> cada pessoinha que você escolheu aprisionar em seu computador, os acontecimentos gerados pelo jogo, e até a própria casa em que tudo acontece</li>
+						<li><b>TESTEMUNHE</b> os seus confinados competindo pela Coroa do Monarca e pela Ascensão do Hierofante. Quem não provar do leite da imunidade, corre o risco de acabar no PAREDÃO</li>
+						<li><b>APRECIE</b> as nove ou mais faixas de trilha sonora original em glorioso chiptune, e o design de interface em que cada botão e caixa de texto contém vestígios de autêntica carne viva!</li>
+					</ul>
+					</p>
 				</div>
-				<div class="iframe-column">
-					<iframe src="https://discord.com/widget?id=1095055033248256193&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				<div class="video-embed-wrapper">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yixCzrpEhvY?si=IOtki8Oqk3siEPLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
-			</div>
-		</div>
-	</section>
+				<div class="content-chunk">
+					<h3 class="text-center">IRMÃO Grande & Brasileiro 2</h3>
+					<p><b>Em IG&B2 você forma um elenco das suas pessoas favoritas.</b> Seus amigos, os personagens daquele desenho que você jura que nunca assistiu, e até os figurões da política e do entretenimento. As possibilidades são infinitas (as possibilidades podem não ser infinitas)!</b></p>
+					<p><b>Você trancafia todos dentro de uma casa</b> (dentro de um jogo) e lá eles vivem as situações mais absurdas e inusitadas que o cérebro humano pôde conceber. Aos moldes dos grandes cárceres competitivos da história, os participantes competem todas as semanas em uma prova, de onde apenas um sai triunfante. Depois da prova da semana, todos que não provaram do leite da imunidade votam para condenar dois participantes ao paredão, sob o risco da penalidade máxima: o DESPEJO.</p>
+					<p><b>Aproveite as opções de customização</b> para construir a sua própria casa, manipular a velocidade do jogo, salvar e compartilhar os seus participantes pela internet, e até mesmo personalizar o baralho de eventos que é usado para gerar os acontecimentos de cada semana.</p>
+				</div>
+			</section>
 
-	<section>
-		<div class="section-content section-height-675">
-			<div class="section-centered-content">
-				<h3 class="patrick-hand-heading-large" style="margin-bottom: 0.5em;">Agora é com você.</h3>
-				<div class="button-container full-width-button-container"><button type="button" onclick="window.location.href='#segredos'" class="casa-btn patrick-hand-sc-regular segredos-fade full-width-button">Segredos</button></div>
-			</div>
-		</div>
-	</section>
+			<section id="continuar" class="divider-top divider-bottom-flip bg-scroll-reverse full-width-section bg-blue">
+				<div class="section-content">
+					<h2>Socialize-se</h2>
+					<div class="two-column-layout" style="margin-top: 1.5em;">
+						<div class="content-chunk">
+							<h3><span class="cu-morph" data-alt="🍄🍄‍🟫🍄🍄‍🟫🍄🍄‍🟫" tabindex="0"><span class="cu-morph-text">Junte-se a nós no Discord!</span></span></h3>
+							<p>Compartilhe as suas criações, conheça nossa comunidade, vislumbre o futuro do jogo, e faça ouvida a sua voz — tome as rédeas do destino!</p>
+							<div class="button-container full-width-button-container"><a href="https://discord.com/invite/Psw69KBkKV" class="casa-btn casa-btn-yellow patrick-hand-sc-regular full-width-button" target="_blank" rel="noopener">Socializar</a></div>
+						</div>
+						<div class="iframe-column">
+							<iframe src="https://discord.com/widget?id=1095055033248256193&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-content section-height-675">
+					<div class="section-centered-content">
+						<h3 class="patrick-hand-heading-large" style="margin-bottom: 0.5em;">Agora é com você.</h3>
+						<div class="button-container full-width-button-container"><button type="button" onclick="switchPage('segredos')" class="casa-btn patrick-hand-sc-regular segredos-fade full-width-button">Segredos</button></div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
 
 	<footer class="site-footer divider-top bg-dark full-width-section">
 		<div class="section-content">
