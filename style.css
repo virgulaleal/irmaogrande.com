@@ -177,6 +177,12 @@ p .no-margin {
 	margin-bottom: 0;
 }
 
+code {
+	background-color: #ffffff;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
 .site-container {
 	max-width: var(--max-site-width);
 	margin: 0 auto;

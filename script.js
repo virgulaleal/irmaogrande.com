@@ -12,7 +12,7 @@ const PAGES = {
 		title: 'IRMÃO Grande & Brasileiro 2'
 	},
 	'manual': {
-		bgColor: '#f4f4f4',
+		bgColor: '#f0f0ff',
 		title: 'Manual - IRMÃO Grande & Brasileiro 2'
 	},
 	'imprensa': {
@@ -441,24 +441,61 @@ function getManualContent() {
 	return `
 		<section>
 			<div class="section-content">
-				<h2>Manual do Usuário</h2>
+				<h2>Dicas e Truques IG&B2</h2>
 				<div class="content-chunk">
-					<h3 class="text-center">Como jogar IRMÃO Grande & Brasileiro 2</h3>
-					<p><b>Bem-vindo ao manual completo!</b> Aqui você encontra tudo o que precisa saber para dominar o mais brasileiro dos simuladores de reality show.</p>
-					
-					<h4>Primeiros Passos</h4>
+					<h3 class="text-center">Índice</h3>
 					<ul class="two-column-list">
-						<li><b>Instale o jogo</b> através da Steam ou itch.io</li>
-						<li><b>Execute o jogo</b> e aguarde o carregamento</li>
-						<li><b>Crie seu elenco</b> com até 16 participantes</li>
-						<li><b>Configure a casa</b> do jeito que preferir</li>
+						<li><a href="#" onclick="document.getElementById('manual-twitch').scrollIntoView({behavior: 'smooth'}); return false;">Modo Twitch.tv</a></li>
 					</ul>
+					<p><b>Ah... é só isso.</b> Pelo menos por enquanto. Não dá pra saber o que o futuro nos reserva.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="manual-twitch">
+			<div class="section-content">
+				<div class="content-chunk">
+					<h3 class="text-center">Modo Twitch.tv!</h3>
+					<p><b>Conecte o jogo ao seu canal Twitch.tv!</b> Usando esta integração, você terá acesso à <b>URNA</b>, uma janela que pode ser aberta durante escolhas manuais, permitindo que seus espectadores votem enviando números no chat.</p>
 					
-					<h4>Criando Participantes</h4>
-					<p>Use o editor de personagens para criar seus participantes favoritos. Defina personalidade, aparência e características especiais.</p>
+					<p>Para cadastrar um aplicativo no Developer Console e usar o modo Twitch.tv, sua conta Twitch deve ter a <a href="https://help.twitch.tv/s/article/two-factor-authentication?language=pt_BR" target="_blank" rel="noopener">autenticação de dois fatores</a> ativada.</p>
 					
-					<h4>Sistema de Votação</h4>
-					<p>Escolha entre votação automática (simulada pelo jogo) ou manual (você decide tudo). O poder está nas suas mãos!</p>
+					<p>O modo Twitch.tv não está disponível para dispositivos móveis (Android).</p>
+
+					<h3 class="text-center">Como configurar o modo Twitch.tv</h3>
+					
+					<p><b>Obtenha as suas credenciais.</b> Para usar o modo Twitch.tv, você vai precisar cadastrar um aplicativo usando o <a href="https://dev.twitch.tv/" target="_blank" rel="noopener">Twitch.tv Developer Console</a>, e usar as credenciais deste aplicativo no jogo para se conectar ao chat do seu canal. Calma, é fácil!</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_thumb.png">
+					
+					<p><b>1.</b> Acesse <a href="https://dev.twitch.tv/" target="_blank" rel="noopener">dev.twitch.tv</a> com a sua conta twitch.tv, e então localize o seu <b>Console</b>.</p>
+					
+					<img src="img/tutorial_twitch/tutorial_twitch_00.png">
+
+					<p><b>2.</b> Do lado direito, no console, pressione o botão para registrar um <b>novo aplicativo</b>.</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_01.png">
+					
+					<p><b>3.</b> Preencha o nome que quiser para o seu aplicativo, mas <em><b>não use acentos</b></em> nem outros caracteres especiais.</p>
+					<p>Para o campo <b>OAuth Redirect URLs</b>, preencha com <code>http://localhost:18297</code>, e escolha a categoria <b>Game Integration</b>. Verifique o captcha e crie seu novo aplicativo.</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_02.png">
+					
+					<p><b>4.</b> Pressione <b>New Secret</b>, tome nota do <b>Client ID</b> e <b>Client Secret</b>. Cuidado! Não deixe ninguém ver o seu Client Secret. Se você acredita que este possa ter sido comprometido, você pode revogá-lo aqui, também.</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_03.png">
+					
+					<p><b>5.</b> Abra o jogo e ative o <b>Modo Twitch.tv</b> nas configurações. Preencha o nome do seu canal, com o Client ID, Client Secret, e pode conectar!</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_04.png">
+					
+					<p><b>7.</b> Ao conectar, a página de autenticação da Twitch.tv vai abrir no seu navegador. Autorize o aplicativo para que ele possa acessar seu chat.</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_06.png">
+					
+					<p><b>8.</b> <b>Parabéns! Você venceu!</b> Para encontrar <b>A URNA</b> durante o jogo e permitir que o chat vote enviando números, certifique-se de ativar <b>votações manuais</b> ao criar sua temporada — as simuladas funcionam como sempre.</p>
+
+					<img src="img/tutorial_twitch/tutorial_twitch_07.png">
 				</div>
 			</div>
 		</section>
