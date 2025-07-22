@@ -170,7 +170,7 @@ body {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 p .no-margin {
@@ -233,11 +233,11 @@ code {
 		border-width: 3px;
 		border-left-width: 6px;
 	}
-	
+
 	.tutorial-screenshot.zoomed {
 		transform: scale(1.2);
 	}
-	
+
 	.tutorial-icon-float-left,
 	.tutorial-icon-float-right {
 		float: none;
