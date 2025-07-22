@@ -217,7 +217,7 @@ function initInteractiveAudio() {
 		element.setAttribute('data-audio-initialized', 'true');
 	});
 
-	const cuMorphElements = document.querySelectorAll('.cu-morph, .badge-item, .gallery-frame');
+	const cuMorphElements = document.querySelectorAll('.cu-morph, .badge-item, .gallery-frame, .author-image');
 
 	cuMorphElements.forEach(element => {
 		if (element.hasAttribute('data-audio-initialized')) return;

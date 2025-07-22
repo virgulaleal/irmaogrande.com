@@ -227,6 +227,54 @@ code {
 	object-fit: contain;
 }
 
+.author-image {
+	float: left;
+	margin: 0 1em 1em 0;
+	width: 178px;
+	height: 177px;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow:
+		4px 4px 0 #fff,
+		8px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.author-frame {
+	position: relative;
+	background: #fff;
+	padding: 2px;
+	padding-bottom: 12px;
+	border: 2px solid #333;
+	box-shadow:
+		inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+	transform: rotate(-2deg);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	float: left;
+	margin: 0 2em 1em 0;
+	width: 178px;
+	height: 190px;
+}
+
+.author-frame:hover {
+	transform: rotate(0deg) scale(1.05);
+	z-index: 10;
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.3),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.author-frame .author-image {
+	display: block;
+	width: 100%;
+	height: 165px;
+	object-fit: cover;
+	border: 1px solid #ddd;
+	margin: 0;
+	float: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
 @media (max-width: 600px) {
 	.tutorial-screenshot {
 		margin: 1em auto;
@@ -414,7 +462,7 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #0002;
+	background: #000;
 	border: var(--section-border-width) solid var(--section-border);
 	border-left: var(--section-border-left-width) solid var(--section-border);
 	border-radius: 12px;
@@ -500,6 +548,22 @@ section {
 	align-items: center;
 	width: 100%;
 	max-width: var(--max-content-width);
+}
+
+.content-chunk .two-column-layout {
+	max-width: none;
+	width: 100%;
+}
+
+.content-chunk .two-column-layout > div {
+	flex: 1;
+	width: 50%;
+}
+
+.content-chunk .two-column-layout .video-embed-wrapper {
+	max-width: none;
+	margin: 1em auto;
+	width: 100%;
 }
 
 .two-column-layout .content-chunk {
@@ -653,7 +717,7 @@ section {
 .two-column-list {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 0.5em 2em;
+	gap: 0.5em 0.5em;
 	list-style: none;
 	padding-left: 0;
 }
@@ -1284,4 +1348,16 @@ main {
 	to {
 		opacity: 1;
 	}
+}
+
+/* Author link styling */
+.author-link {
+	color: rgb(32, 33, 34);
+	font-size: 14px;
+	text-emphasis-position: auto;
+	border-radius: 2px;
+}
+
+.author-link-bracket {
+	cursor: pointer;
 }
