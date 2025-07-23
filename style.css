@@ -1224,6 +1224,25 @@ hr.divider-dark {
 	margin: 0;
 	font-size: 1.1em;
 	opacity: 0.9;
+	text-align: center;
+}
+
+.site-footer nav {
+	margin-top: 1em;
+	text-align: center;
+}
+
+.site-footer nav a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.2s ease;
+	padding: 0 0.5em;
+}
+
+.site-footer nav a:hover,
+.site-footer nav a:focus {
+	color: var(--main-bg);
+	text-decoration: underline;
 }
 
 .full-width-button-container {

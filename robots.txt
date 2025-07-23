@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://irmaogrande.com/sitemap.xml
+
+# Allow crawling of all resources
+Allow: /img/
+Allow: /audio/
+Allow: /*.css
+Allow: /*.js
+
+# Disallow specific files if needed
+# Disallow: /admin/
