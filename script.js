@@ -101,34 +101,28 @@ function initLightGallery() {
 				width: '100%',
 				height: '100%',
 				dynamicEl: [
-					{
-						src: 'img/screenshots/1741958972.png',
-						thumb: 'img/screenshots/1741958972.png'
-					},
-					{
-						src: 'img/screenshots/1741959116.png',
-						thumb: 'img/screenshots/1741959116.png'
-					},
-					{
-						src: 'img/screenshots/1745107477.png',
-						thumb: 'img/screenshots/1745107477.png'
-					},
-					{
-						src: 'img/screenshots/1745417588.png',
-						thumb: 'img/screenshots/1745417588.png'
-					},
-					{
-						src: 'img/screenshots/1746453986.png',
-						thumb: 'img/screenshots/1746453986.png'
-					},
-					{
-						src: 'img/screenshots/1746757248.png',
-						thumb: 'img/screenshots/1746757248.png'
-					},
-					{
-						src: 'img/screenshots/1752945580.png',
-						thumb: 'img/screenshots/1752945580.png'
-					}
+					{ src: 'img/screenshots/1753226156.png', thumb: 'img/screenshots/1753226156.png' },
+					{ src: 'img/screenshots/1753224090.png', thumb: 'img/screenshots/1753224090.png' },
+					{ src: 'img/screenshots/1753226102.png', thumb: 'img/screenshots/1753226102.png' },
+					{ src: 'img/screenshots/1741958972.png', thumb: 'img/screenshots/1741958972.png' },
+					{ src: 'img/screenshots/1741959116.png', thumb: 'img/screenshots/1741959116.png' },
+					{ src: 'img/screenshots/1753225422.png', thumb: 'img/screenshots/1753225422.png' },
+					{ src: 'img/screenshots/1745417588.png', thumb: 'img/screenshots/1745417588.png' },
+					{ src: 'img/screenshots/1746453986.png', thumb: 'img/screenshots/1746453986.png' },
+					{ src: 'img/screenshots/1752947645.png', thumb: 'img/screenshots/1752947645.png' },
+					{ src: 'img/screenshots/1753224248.png', thumb: 'img/screenshots/1753224248.png' },
+					{ src: 'img/screenshots/1753224256.png', thumb: 'img/screenshots/1753224256.png' },
+					{ src: 'img/screenshots/1753224552.png', thumb: 'img/screenshots/1753224552.png' },
+					{ src: 'img/screenshots/1753225008.png', thumb: 'img/screenshots/1753225008.png' },
+					{ src: 'img/screenshots/1753224592.png', thumb: 'img/screenshots/1753224592.png' },
+					{ src: 'img/screenshots/1753225626.png', thumb: 'img/screenshots/1753225626.png' },
+					{ src: 'img/screenshots/1753225630.png', thumb: 'img/screenshots/1753225630.png' },
+					{ src: 'img/screenshots/1753225714.png', thumb: 'img/screenshots/1753225714.png' },
+					{ src: 'img/screenshots/1753225744.png', thumb: 'img/screenshots/1753225744.png' },
+					{ src: 'img/screenshots/1753225866.png', thumb: 'img/screenshots/1753225866.png' },
+					{ src: 'img/screenshots/1753226442.png', thumb: 'img/screenshots/1753226442.png' },
+					{ src: 'img/screenshots/1753226975.png', thumb: 'img/screenshots/1753226975.png' },
+					{ src: 'img/screenshots/1753227589.png', thumb: 'img/screenshots/1753227589.png' }
 				]
 			});
 
@@ -171,12 +165,12 @@ const audioEventHandlers = new WeakMap();
 
 function initTutorialScreenshotZoom() {
 	const tutorialScreenshots = document.querySelectorAll('.tutorial-screenshot');
-	
+
 	tutorialScreenshots.forEach(screenshot => {
 		if (screenshot.hasAttribute('data-zoom-initialized')) return;
-		
+
 		screenshot.style.cursor = 'pointer';
-		
+
 		const clickHandler = () => {
 			screenshot.classList.toggle('zoomed');
 			playAudio('audio/click_01.wav');
@@ -185,7 +179,7 @@ function initTutorialScreenshotZoom() {
 		const mouseenterHandler = () => {
 			playRandomTypeAudio();
 		};
-		
+
 		screenshot.addEventListener('click', clickHandler);
 		screenshot.addEventListener('mouseenter', mouseenterHandler);
 		screenshot.setAttribute('data-zoom-initialized', 'true');
@@ -193,7 +187,7 @@ function initTutorialScreenshotZoom() {
 }
 
 function initInteractiveAudio() {
-	const interactiveElements = document.querySelectorAll('button, a, .casa-btn, iframe, .lg-image, .lg-thumb-item');
+	const interactiveElements = document.querySelectorAll('button, a, .casa-btn, iframe, .lg-image, .lg-thumb-item, .telefonezinho-image');
 
 	interactiveElements.forEach(element => {
 		if (element.hasAttribute('data-audio-initialized')) return;
@@ -241,7 +235,6 @@ function switchPage(pageName) {
 
 	const pageConfig = PAGES[pageName] || PAGES[''];
 
-	// Update URL and title
 	if (pageName) {
 		history.pushState(null, null, '#' + pageName);
 	} else {
@@ -249,36 +242,28 @@ function switchPage(pageName) {
 	}
 	document.title = pageConfig.title;
 
-	// Hide all pages
 	document.querySelectorAll('.page-content').forEach(page => {
 		page.style.display = 'none';
 	});
 
-	// Show the target page
 	const targetPageId = pageName ? `page-${pageName}` : 'page-home';
 	const targetPage = document.getElementById(targetPageId);
 	if (targetPage) {
 		targetPage.style.display = 'flex';
 	}
 
-	// Update background color
 	document.body.style.backgroundColor = pageConfig.bgColor;
 
-	// Scroll to top
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 
 	currentPage = pageName;
 }
 
 function loadPageContent(pageName) {
-	// This function is now obsolete since content is already in HTML
-	// Just call switchPage directly
 	switchPage(pageName);
 }
 
 function reinitializePageFeatures() {
-	// This function is now obsolete since we don't dynamically inject content
-	// All event listeners are initialized once on page load
 }
 
 function initPageSwitching() {
@@ -302,6 +287,21 @@ function initPageSwitching() {
 	const currentHash = window.location.hash.slice(1);
 	if (currentHash && PAGES[currentHash]) {
 		switchPage(currentHash);
+	}
+}
+
+function openSegredoModal() {
+	const modal = document.getElementById('segredo-modal');
+	if (modal) {
+		modal.style.display = 'block';
+		playAudio('audio/segredo.wav');
+	}
+}
+
+function closeSegredoModal() {
+	const modal = document.getElementById('segredo-modal');
+	if (modal) {
+		modal.style.display = 'none';
 	}
 }
 

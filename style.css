@@ -183,7 +183,6 @@ code {
 	padding-right: 0.25em;
 }
 
-/* Tutorial Images */
 .tutorial-screenshot {
 	width: 100%;
 	max-width: 100%;
@@ -555,7 +554,7 @@ section {
 	width: 100%;
 }
 
-.content-chunk .two-column-layout > div {
+.content-chunk .two-column-layout>div {
 	flex: 1;
 	width: 50%;
 }
@@ -1350,7 +1349,6 @@ main {
 	}
 }
 
-/* Author link styling */
 .author-link {
 	color: rgb(32, 33, 34);
 	font-size: 14px;
@@ -1360,4 +1358,47 @@ main {
 
 .author-link-bracket {
 	cursor: pointer;
+}
+
+.telefonezinho-image {
+	display: block;
+	margin: 2em auto;
+	cursor: pointer;
+	transition: transform 0.3s ease, filter 0.3s ease;
+	max-width: 200px;
+	height: auto;
+}
+
+.telefonezinho-image:hover {
+	transform: scale(1.05);
+	filter: brightness(1.1);
+}
+
+.segredo-modal {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	cursor: pointer;
+}
+
+.segredo-modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+	border-radius: var(--section-radius);
+	box-shadow: var(--chunk-shadow);
+}
+
+.segredo-modal-image {
+	width: 100%;
+	height: auto;
+	border-radius: var(--section-radius);
 }
